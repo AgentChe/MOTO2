@@ -95,9 +95,12 @@
 "Onboarding.PlanView.Column2.Title" = "15 tests\nper week";
 "Onboarding.PlanView.Column2.Period" = "Week 4";
 "Onboarding.PlanView.Button" = "Get my plan";
+"Onboarding.Locale.Country.Tab" = "Country";
+"Onboarding.Locale.Country.Title" = "Select\nyour country";
+"Onboarding.Locale.Language.Tab" = "Language";
+"Onboarding.Locale.Language.Title" = "Select language";
+"Onboarding.Locale.State.Tab" = "State";
 "Onboarding.Locale.State.Title" = "Select your state,\nprovince or district";
-"Onboarding.Locale.Language.Title" = "Select your language";
-"Onboarding.Locale.Country.Title" = "Choose\nyour country";
 
 // MARK: Paygate
 "Paygate.Error.Title" = "Error";

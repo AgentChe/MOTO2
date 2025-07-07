@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class LocaleTableView: UITableView {
-    var tapped: (() -> Void)?
-    
     lazy var elements = [LocaleTableViewElement]()
+    
+    private lazy var didSelectTrigger = PublishRelay<LocaleTableViewElement>()
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
@@ -29,6 +31,10 @@ extension LocaleTableView {
         self.elements = elements
         
         reloadData()
+    }
+    
+    var didSelect: Signal<LocaleTableViewElement> {
+        didSelectTrigger.asSignal()
     }
 }
 
@@ -54,7 +60,7 @@ extension LocaleTableView: UITableViewDelegate {
         
         reloadData()
         
-        tapped?()
+        didSelectTrigger.accept(elements[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

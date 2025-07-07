@@ -27,18 +27,49 @@ final class LocaleViewController: UIViewController {
         }
         
         let output = viewModel.configure(input: LocaleViewModel.Input(
-            didSave: mainView.didSave
+            didTapNext: mainView.nextButton.rx.tap.asSignal(),
+            didSelect: mainView.tableView.didSelect
         ))
+        
+        output.elements
+            .drive(Binder(mainView.tableView) { base, elements in
+                base.setup(elements: elements)
+            })
+            .disposed(by: disposeBag)
+        
+        output.currentEntity
+            .drive(Binder(mainView) { base, entity in
+                base.tabView.update(currentItem: {
+                    switch entity {
+                    case .country: return .country
+                    case .language: return .language
+                    case .state: return .state
+                    }
+                }())
+                
+                base.titleView.update(text: {
+                    switch entity {
+                    case .country:
+                        return "Onboarding.Locale.Country.Title".localized
+                    case .language:
+                        return "Onboarding.Locale.Language.Title".localized
+                    case .state:
+                        return "Onboarding.Locale.State.Title".localized
+                    }
+                }())
+            })
+            .disposed(by: disposeBag)
+        
+        output.displayItemsTab
+            .drive(Binder(mainView.tabView) { base, displayItemsTab in
+                base.isHidden = displayItemsTab == .country
+                base.update(displayItems: displayItemsTab)
+            })
+            .disposed(by: disposeBag)
         
         output.activity
             .drive(Binder(mainView) { base, activity in
                 base.activity(activity)
-            })
-            .disposed(by: disposeBag)
-        
-        output.countries
-            .drive(Binder(mainView) { base, countries in
-                base.setup(countries: countries)
             })
             .disposed(by: disposeBag)
         
@@ -71,12 +102,10 @@ private extension LocaleViewController {
     func open(error: Error) -> Observable<Void> {
         Observable<Void>
             .create { [weak self] observe in
-                guard let self else { return Disposables.create() }
-                
                 let vc = TryAgainViewController.make() {
                     observe.onNext(())
                 }
-                self.present(vc, animated: true)
+                self?.present(vc, animated: true)
                 
                 return Disposables.create()
             }

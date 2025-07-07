@@ -33,6 +33,7 @@ final class LocaleTableViewCell: UITableViewCell {
 // MARK: Public
 extension LocaleTableViewCell {
     func setup(element: LocaleTableViewElement) {
+        container.backgroundColor = element.isSelected ? Appearance.main300.withAlphaComponent(0.1) : Appearance.main200
         container.layer.borderWidth = element.isSelected ? 2.scale : 0
         container.layer.borderColor = element.isSelected ? Appearance.main300.cgColor : UIColor.clear.cgColor
         
@@ -73,7 +74,6 @@ private extension LocaleTableViewCell {
 private extension LocaleTableViewCell {
     func makeContainer() -> UIView {
         let view = UIView()
-        view.backgroundColor = Appearance.main200
         view.layer.cornerRadius = 12.scale
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)

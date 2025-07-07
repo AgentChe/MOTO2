@@ -10,18 +10,15 @@ import RxSwift
 import RxCocoa
 
 final class LocaleView: UIView {
-    lazy var countryView = makeCountryView()
-    lazy var languageView = makeLanguageView()
-    lazy var stateView = makeStateView()
+    enum Entity {
+        case country, language, state
+    }
+    
+    lazy var tabView = makeTabView()
+    lazy var titleView = makeTitleView()
+    lazy var tableView = makeTableView()
+    lazy var nextButton = makeNextButton()
     lazy var preloader = makePreloader()
-    
-    private lazy var completeTrigger = PublishRelay<ProfileLocale>()
-    
-    private lazy var disposeBag = DisposeBag()
-    
-    private lazy var countries = [Country]()
-    
-    private lazy var countryLeadingConstraint = NSLayoutConstraint()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,217 +34,101 @@ final class LocaleView: UIView {
 
 // MARK: Public
 extension LocaleView {
-    func setup(countries: [Country]) {
-        self.countries = countries
-        
-        countryView.setup(countries: countries)
-        
-        if countries.isEmpty {
-            complete()
-        } else if countries.count == 1 {
-            countrySelected()
-        }
-    }
-    
     func activity(_ activity: Bool) {
-        countryView.button.isHidden = activity
-        languageView.button.isHidden = activity
-        stateView.button.isHidden = activity
-        
+        nextButton.isHidden = activity
         activity ? preloader.startAnimating() : preloader.stopAnimating()
-    }
-    
-    var didSave: Signal<ProfileLocale> {
-        completeTrigger.asSignal()
     }
 }
 
 // MARK: Private
 private extension LocaleView {
-    enum Content {
-        case country
-        case language
-        case state
-    }
-    
     func initialize() {
         backgroundColor = Appearance.main100
-        
-        countryView.onNext = { [weak self] in self?.countrySelected() }
-        languageView.onNext = { [weak self] in self?.languageSelected() }
-        stateView.onNext = { [weak self] in self?.stateSelected() }
-    }
-    
-    func countrySelected() {
-        guard
-            let countryCode = getSelectedCountry(),
-            let languages = countries.first(where: { $0.code == countryCode })?.languages
-        else {
-            return
-        }
-        
-        languageView.setup(languages: languages)
-        
-        if languages.isEmpty {
-            complete()
-        } else if languages.count == 1 {
-            languageSelected()
-        } else {
-            scroll(to: .language)
-        }
-    }
-    
-    func languageSelected() {
-        guard
-            let countryCode = getSelectedCountry(),
-            let languages = countries.first(where: { $0.code == countryCode })?.languages,
-            let languageCode = getSelectedLanguage(),
-            let states = languages.first(where: { $0.code == languageCode })?.states
-        else {
-            return
-        }
-        
-        stateView.setup(states: states)
-        
-        if states.isEmpty {
-            complete()
-        } else if states.count == 1 {
-            stateSelected()
-        } else {
-            scroll(to: .state)
-        }
-    }
-    
-    func stateSelected() {
-        complete()
-    }
-    
-    func getSelectedCountry() -> String? {
-        let elements = countryView.tableView.elements
-        if elements.isEmpty {
-            return nil
-        } else if elements.count == 1 {
-            return elements.first?.code
-        } else {
-            return elements.first(where: { $0.isSelected })?.code
-        }
-    }
-    
-    func getSelectedLanguage() -> String? {
-        let elements = languageView.tableView.elements
-        
-        if elements.isEmpty {
-            return nil
-        } else if elements.count == 1 {
-            return elements.first?.code
-        } else {
-            return elements.first(where: { $0.isSelected })?.code
-        }
-    }
-    
-    func getSelectedState() -> String? {
-        let stats = stateView.states
-        
-        if stats.isEmpty {
-            return nil
-        } else if stats.count == 1 {
-            return stats.first?.code
-        } else {
-            let row = stateView.pickerView.selectedRow(inComponent: 0)
-            guard stats.indices.contains(row) else {
-                return nil
-            }
-            return stats[row].code
-        }
-    }
-    
-    func scroll(to content: Content) {
-        countryLeadingConstraint.isActive = false
-        countryLeadingConstraint.constant = {
-            switch content {
-            case .country:
-                return 0
-            case .language:
-                return -bounds.width
-            case .state:
-                return -bounds.width * 2
-            }
-        }()
-        countryLeadingConstraint.isActive = true
-        
-        UIView.animate(withDuration: 0.3, animations: { [weak self] in
-            self?.layoutIfNeeded()
-        })
-    }
-    
-    func complete() {
-        let locale = ProfileLocale(
-            countryCode: getSelectedCountry(),
-            languageCode: getSelectedLanguage(),
-            stateCode: getSelectedState()
-        )
-        
-        completeTrigger.accept(locale)
     }
 }
 
 // MARK: Make constraints
 private extension LocaleView {
     func makeConstraints() {
-        countryLeadingConstraint = countryView.leadingAnchor.constraint(equalTo: leadingAnchor)
         NSLayoutConstraint.activate([
-            countryLeadingConstraint,
-            countryView.topAnchor.constraint(equalTo: topAnchor),
-            countryView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            countryView.widthAnchor.constraint(equalTo: widthAnchor)
+            tabView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tabView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tabView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 24.scale),
+            tabView.heightAnchor.constraint(equalToConstant: 32.scale)
         ])
         
         NSLayoutConstraint.activate([
-            languageView.leadingAnchor.constraint(equalTo: countryView.trailingAnchor),
-            languageView.topAnchor.constraint(equalTo: topAnchor),
-            languageView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            languageView.widthAnchor.constraint(equalTo: widthAnchor)
+            titleView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 54.scale),
+            titleView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -54.scale),
+            titleView.topAnchor.constraint(equalTo: tabView.bottomAnchor, constant: 16.scale)
         ])
         
         NSLayoutConstraint.activate([
-            stateView.leadingAnchor.constraint(equalTo: languageView.trailingAnchor),
-            stateView.topAnchor.constraint(equalTo: topAnchor),
-            stateView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            stateView.widthAnchor.constraint(equalTo: widthAnchor)
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.topAnchor.constraint(equalTo: titleView.bottomAnchor, constant: 2.scale),
+            tableView.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: -2.scale)
         ])
         
         NSLayoutConstraint.activate([
-            preloader.centerXAnchor.constraint(equalTo: centerXAnchor),
-            preloader.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -85.scale : -55.scale)
+            nextButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 28.scale),
+            nextButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -28.scale),
+            nextButton.heightAnchor.constraint(equalToConstant: 48.scale),
+            nextButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -60.scale : -30.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            preloader.centerXAnchor.constraint(equalTo: nextButton.centerXAnchor),
+            preloader.centerYAnchor.constraint(equalTo: nextButton.centerYAnchor)
         ])
     }
 }
 
 // MARK: Lazy initialization
 private extension LocaleView {
-    func makeCountryView() -> LocaleCountryView {
-        let view = LocaleCountryView()
+    func makeTabView() -> LocaleTabView {
+        let view = LocaleTabView()
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
     }
     
-    func makeLanguageView() -> LocaleLanguageView {
-        let view = LocaleLanguageView()
+    func makeTitleView() -> LocaleTitleView {
+        let view = LocaleTitleView()
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
     }
     
-    func makeStateView() -> LocaleStateView {
-        let view = LocaleStateView()
+    func makeTableView() -> LocaleTableView {
+        let view = LocaleTableView()
+        view.backgroundColor = UIColor.clear
+        view.showsVerticalScrollIndicator = false
+        view.separatorStyle = .none
+        view.contentInset = UIEdgeInsets(vertical: 8.scale)
+        view.setContentOffset(CGPoint(x: 0, y: -8.scale), animated: false)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeNextButton() -> UIButton {
+        let attrs = TextAttributes()
+            .textColor(Appearance.mono100)
+            .font(Fonts.Inter.semiBold(size: 17.scale))
+            .letterSpacing(-0.44.scale)
+        
+        let view = UIButton()
+        view.setAttributedTitle("Next".localized.attributed(with: attrs), for: .normal)
+        view.backgroundColor = Appearance.main300
+        view.layer.cornerRadius = 8.scale
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
     }
     
     func makePreloader() -> Spinner {
-        let view = Spinner(size: CGSize(width: 24.scale, height: 24.scale), color: .white)
+        let view = Spinner(size: CGSize(width: 45.scale, height: 45.scale))
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
