@@ -8,6 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		9485F81BB2DA62DCF78A959F /* Pods_MOTO2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1371292964DEFD183378923 /* Pods_MOTO2.framework */; };
+		DE18FC8F2E253175008F207C /* GetFlashcardsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC862E253175008F207C /* GetFlashcardsRequest.swift */; };
+		DE18FC902E253175008F207C /* GetFlashcardsTopicsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC892E253175008F207C /* GetFlashcardsTopicsRequest.swift */; };
+		DE18FC912E253175008F207C /* GetFlashcardsResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC872E253175008F207C /* GetFlashcardsResponseMapper.swift */; };
+		DE18FC922E253175008F207C /* MarkFlashcardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC8C2E253175008F207C /* MarkFlashcardRequest.swift */; };
+		DE18FC932E253175008F207C /* GetFlashcardsTopicsResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC8A2E253175008F207C /* GetFlashcardsTopicsResponseMapper.swift */; };
+		DE18FC942E253175008F207C /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC832E253175008F207C /* Flashcard.swift */; };
+		DE18FC952E253175008F207C /* FlashcardTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC842E253175008F207C /* FlashcardTopic.swift */; };
+		DE18FC962E253175008F207C /* FlashCardManagerMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC802E253175008F207C /* FlashCardManagerMediator.swift */; };
+		DE18FC972E253175008F207C /* FlashcardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC812E253175008F207C /* FlashcardsManager.swift */; };
+		DE18FCAD2E253188008F207C /* FlashcardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FCA22E253188008F207C /* FlashcardsViewController.swift */; };
+		DE18FCAE2E253188008F207C /* FlashCardContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC9D2E253188008F207C /* FlashCardContainerView.swift */; };
+		DE18FCAF2E253188008F207C /* FlashcardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FCA32E253188008F207C /* FlashcardsViewModel.swift */; };
+		DE18FCB02E253188008F207C /* FlashcardsTopicsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FCA62E253188008F207C /* FlashcardsTopicsTableView.swift */; };
+		DE18FCB12E253188008F207C /* FlashcardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FCA12E253188008F207C /* FlashcardsView.swift */; };
+		DE18FCB22E253188008F207C /* FlashCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC9E2E253188008F207C /* FlashCardView.swift */; };
+		DE18FCB32E253188008F207C /* FlashcardsTopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FCA92E253188008F207C /* FlashcardsTopicsViewController.swift */; };
+		DE18FCB42E253188008F207C /* FlashcardsTopicsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FCA52E253188008F207C /* FlashcardsTopicsTableCell.swift */; };
+		DE18FCB52E253188008F207C /* FlashcardsFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC992E253188008F207C /* FlashcardsFinishViewController.swift */; };
+		DE18FCB62E253188008F207C /* FlashCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC9B2E253188008F207C /* FlashCardModel.swift */; };
+		DE18FCB72E253188008F207C /* FlashcardsTopicsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FCAA2E253188008F207C /* FlashcardsTopicsViewModel.swift */; };
+		DE18FCB82E253188008F207C /* FlashcardsTopicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FCA82E253188008F207C /* FlashcardsTopicsView.swift */; };
+		DE18FCB92E253188008F207C /* FlashcardsFinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC982E253188008F207C /* FlashcardsFinishView.swift */; };
+		DE18FCC12E2531E1008F207C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FCBE2E2531E1008F207C /* MainViewController.swift */; };
+		DE18FCC22E2531E1008F207C /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FCBB2E2531E1008F207C /* TabView.swift */; };
+		DE18FCC32E2531E1008F207C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FCBD2E2531E1008F207C /* MainView.swift */; };
+		DE18FCC42E2531E1008F207C /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FCBA2E2531E1008F207C /* TabItemView.swift */; };
+		DE18FCC52E2531E1008F207C /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FCBF2E2531E1008F207C /* MainViewCoordinator.swift */; };
 		DE4790592E1C040F006564A0 /* LocaleTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4790542E1C040F006564A0 /* LocaleTitleView.swift */; };
 		DE47905A2E1C040F006564A0 /* LocaleTableViewElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4790522E1C040F006564A0 /* LocaleTableViewElement.swift */; };
 		DE47905B2E1C040F006564A0 /* OLocaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4790562E1C040F006564A0 /* OLocaleView.swift */; };
@@ -113,7 +140,6 @@
 		DE61595E2DDA5159009A9952 /* OCreatingPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6158172DDA5159009A9952 /* OCreatingPlanView.swift */; };
 		DE61595F2DDA5159009A9952 /* StatsMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6159052DDA5159009A9952 /* StatsMediator.swift */; };
 		DE6159602DDA5159009A9952 /* ReviewFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6157C82DDA5159009A9952 /* ReviewFilterButton.swift */; };
-		DE6159612DDA5159009A9952 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61575F2DDA5159009A9952 /* MainViewController.swift */; };
 		DE6159622DDA5159009A9952 /* SignError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61574A2DDA5159009A9952 /* SignError.swift */; };
 		DE6159632DDA5159009A9952 /* PracticeDateOfExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61579A2DDA5159009A9952 /* PracticeDateOfExamView.swift */; };
 		DE6159642DDA5159009A9952 /* GetPlanRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6158A92DDA5159009A9952 /* GetPlanRequest.swift */; };
@@ -166,7 +192,6 @@
 		DE6159942DDA5159009A9952 /* TapAreaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6157362DDA5159009A9952 /* TapAreaButton.swift */; };
 		DE6159952DDA5159009A9952 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61583C2DDA5159009A9952 /* SplashViewModel.swift */; };
 		DE6159962DDA5159009A9952 /* QuestionsCountCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6158432DDA5159009A9952 /* QuestionsCountCollectionLayout.swift */; };
-		DE6159972DDA5159009A9952 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61575E2DDA5159009A9952 /* MainView.swift */; };
 		DE6159982DDA5159009A9952 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6157982DDA5159009A9952 /* PracticeViewModel.swift */; };
 		DE6159992DDA5159009A9952 /* TestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61585F2DDA5159009A9952 /* TestType.swift */; };
 		DE61599A2DDA5159009A9952 /* GetProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6158BB2DDA5159009A9952 /* GetProfileRequest.swift */; };
@@ -185,7 +210,6 @@
 		DE6159A72DDA5159009A9952 /* SettingsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6157DF2DDA5159009A9952 /* SettingsTableView.swift */; };
 		DE6159A82DDA5159009A9952 /* PaygateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61582B2DDA5159009A9952 /* PaygateInteractor.swift */; };
 		DE6159A92DDA5159009A9952 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61573A2DDA5159009A9952 /* String+Extension.swift */; };
-		DE6159AA2DDA5159009A9952 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61575B2DDA5159009A9952 /* TabItemView.swift */; };
 		DE6159AB2DDA5159009A9952 /* GetProfileResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6158BC2DDA5159009A9952 /* GetProfileResponseMapper.swift */; };
 		DE6159AC2DDA5159009A9952 /* RemoveSavedQuestionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6158EE2DDA5159009A9952 /* RemoveSavedQuestionRequest.swift */; };
 		DE6159AD2DDA5159009A9952 /* TestStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6158F92DDA5159009A9952 /* TestStats.swift */; };
@@ -316,7 +340,6 @@
 		DE615A2F2DDA5159009A9952 /* CustomMadeTestTableTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61584D2DDA5159009A9952 /* CustomMadeTestTableTitleCell.swift */; };
 		DE615A302DDA5159009A9952 /* PlanHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6157812DDA5159009A9952 /* PlanHeaderView.swift */; };
 		DE615A312DDA5159009A9952 /* GetTenTestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6158E12DDA5159009A9952 /* GetTenTestRequest.swift */; };
-		DE615A332DDA5159009A9952 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61575C2DDA5159009A9952 /* TabView.swift */; };
 		DE615A342DDA5159009A9952 /* TestSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6158982DDA5159009A9952 /* TestSequence.swift */; };
 		DE615A352DDA5159009A9952 /* ReviewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6157CF2DDA5159009A9952 /* ReviewTableView.swift */; };
 		DE615A362DDA5159009A9952 /* CustomMadeTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6158532DDA5159009A9952 /* CustomMadeTestView.swift */; };
@@ -345,7 +368,6 @@
 		DE615A4E2DDA5159009A9952 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6158C22DDA5159009A9952 /* ProfileManager.swift */; };
 		DE615A4F2DDA5159009A9952 /* SettingsProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6157DB2DDA5159009A9952 /* SettingsProfileCell.swift */; };
 		DE615A502DDA5159009A9952 /* PaygateActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6158312DDA5159009A9952 /* PaygateActionsView.swift */; };
-		DE615A512DDA5159009A9952 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6157602DDA5159009A9952 /* MainViewCoordinator.swift */; };
 		DE615A522DDA5159009A9952 /* APIRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6157452DDA5159009A9952 /* APIRequestBody.swift */; };
 		DE615A532DDA5159009A9952 /* RestAPITransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6157462DDA5159009A9952 /* RestAPITransport.swift */; };
 		DE615A542DDA5159009A9952 /* ProfileViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6157C32DDA5159009A9952 /* ProfileViewCoordinator.swift */; };
@@ -370,6 +392,33 @@
 		25ABAEC68D36E3204E5C7511 /* Pods-MOTO2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOTO2.debug.xcconfig"; path = "Target Support Files/Pods-MOTO2/Pods-MOTO2.debug.xcconfig"; sourceTree = "<group>"; };
 		773B058C23AD56755278778C /* Pods-MOTO2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOTO2.release.xcconfig"; path = "Target Support Files/Pods-MOTO2/Pods-MOTO2.release.xcconfig"; sourceTree = "<group>"; };
 		D1371292964DEFD183378923 /* Pods_MOTO2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MOTO2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE18FC802E253175008F207C /* FlashCardManagerMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardManagerMediator.swift; sourceTree = "<group>"; };
+		DE18FC812E253175008F207C /* FlashcardsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsManager.swift; sourceTree = "<group>"; };
+		DE18FC832E253175008F207C /* Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
+		DE18FC842E253175008F207C /* FlashcardTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardTopic.swift; sourceTree = "<group>"; };
+		DE18FC862E253175008F207C /* GetFlashcardsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFlashcardsRequest.swift; sourceTree = "<group>"; };
+		DE18FC872E253175008F207C /* GetFlashcardsResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFlashcardsResponseMapper.swift; sourceTree = "<group>"; };
+		DE18FC892E253175008F207C /* GetFlashcardsTopicsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFlashcardsTopicsRequest.swift; sourceTree = "<group>"; };
+		DE18FC8A2E253175008F207C /* GetFlashcardsTopicsResponseMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFlashcardsTopicsResponseMapper.swift; sourceTree = "<group>"; };
+		DE18FC8C2E253175008F207C /* MarkFlashcardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkFlashcardRequest.swift; sourceTree = "<group>"; };
+		DE18FC982E253188008F207C /* FlashcardsFinishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsFinishView.swift; sourceTree = "<group>"; };
+		DE18FC992E253188008F207C /* FlashcardsFinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsFinishViewController.swift; sourceTree = "<group>"; };
+		DE18FC9B2E253188008F207C /* FlashCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardModel.swift; sourceTree = "<group>"; };
+		DE18FC9D2E253188008F207C /* FlashCardContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardContainerView.swift; sourceTree = "<group>"; };
+		DE18FC9E2E253188008F207C /* FlashCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardView.swift; sourceTree = "<group>"; };
+		DE18FCA12E253188008F207C /* FlashcardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsView.swift; sourceTree = "<group>"; };
+		DE18FCA22E253188008F207C /* FlashcardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsViewController.swift; sourceTree = "<group>"; };
+		DE18FCA32E253188008F207C /* FlashcardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsViewModel.swift; sourceTree = "<group>"; };
+		DE18FCA52E253188008F207C /* FlashcardsTopicsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsTopicsTableCell.swift; sourceTree = "<group>"; };
+		DE18FCA62E253188008F207C /* FlashcardsTopicsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsTopicsTableView.swift; sourceTree = "<group>"; };
+		DE18FCA82E253188008F207C /* FlashcardsTopicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsTopicsView.swift; sourceTree = "<group>"; };
+		DE18FCA92E253188008F207C /* FlashcardsTopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsTopicsViewController.swift; sourceTree = "<group>"; };
+		DE18FCAA2E253188008F207C /* FlashcardsTopicsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsTopicsViewModel.swift; sourceTree = "<group>"; };
+		DE18FCBA2E2531E1008F207C /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
+		DE18FCBB2E2531E1008F207C /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		DE18FCBD2E2531E1008F207C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DE18FCBE2E2531E1008F207C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DE18FCBF2E2531E1008F207C /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
 		DE47904D2E1C040F006564A0 /* LocaleTabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleTabItemView.swift; sourceTree = "<group>"; };
 		DE47904E2E1C040F006564A0 /* LocaleTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleTabView.swift; sourceTree = "<group>"; };
 		DE4790502E1C040F006564A0 /* LocaleTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleTableView.swift; sourceTree = "<group>"; };
@@ -433,11 +482,6 @@
 		DE6157572DDA5159009A9952 /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		DE6157582DDA5159009A9952 /* GlobalDefinitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalDefinitions.swift; sourceTree = "<group>"; };
 		DE6157592DDA5159009A9952 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DE61575B2DDA5159009A9952 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
-		DE61575C2DDA5159009A9952 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
-		DE61575E2DDA5159009A9952 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		DE61575F2DDA5159009A9952 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		DE6157602DDA5159009A9952 /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
 		DE6157622DDA5159009A9952 /* ImageScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollView.swift; sourceTree = "<group>"; };
 		DE6157642DDA5159009A9952 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		DE6157662DDA5159009A9952 /* CoursesTableCourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableCourseCell.swift; sourceTree = "<group>"; };
@@ -759,6 +803,158 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DE18FC822E253175008F207C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DE18FC802E253175008F207C /* FlashCardManagerMediator.swift */,
+				DE18FC812E253175008F207C /* FlashcardsManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		DE18FC852E253175008F207C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE18FC832E253175008F207C /* Flashcard.swift */,
+				DE18FC842E253175008F207C /* FlashcardTopic.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DE18FC882E253175008F207C /* GetFlashcards */ = {
+			isa = PBXGroup;
+			children = (
+				DE18FC862E253175008F207C /* GetFlashcardsRequest.swift */,
+				DE18FC872E253175008F207C /* GetFlashcardsResponseMapper.swift */,
+			);
+			path = GetFlashcards;
+			sourceTree = "<group>";
+		};
+		DE18FC8B2E253175008F207C /* GetFlashcardsTopics */ = {
+			isa = PBXGroup;
+			children = (
+				DE18FC892E253175008F207C /* GetFlashcardsTopicsRequest.swift */,
+				DE18FC8A2E253175008F207C /* GetFlashcardsTopicsResponseMapper.swift */,
+			);
+			path = GetFlashcardsTopics;
+			sourceTree = "<group>";
+		};
+		DE18FC8D2E253175008F207C /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DE18FC882E253175008F207C /* GetFlashcards */,
+				DE18FC8B2E253175008F207C /* GetFlashcardsTopics */,
+				DE18FC8C2E253175008F207C /* MarkFlashcardRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DE18FC8E2E253175008F207C /* Flashcards */ = {
+			isa = PBXGroup;
+			children = (
+				DE18FC822E253175008F207C /* Manager */,
+				DE18FC852E253175008F207C /* Models */,
+				DE18FC8D2E253175008F207C /* Request */,
+			);
+			path = Flashcards;
+			sourceTree = "<group>";
+		};
+		DE18FC9A2E253188008F207C /* Finish */ = {
+			isa = PBXGroup;
+			children = (
+				DE18FC982E253188008F207C /* FlashcardsFinishView.swift */,
+				DE18FC992E253188008F207C /* FlashcardsFinishViewController.swift */,
+			);
+			path = Finish;
+			sourceTree = "<group>";
+		};
+		DE18FC9C2E253188008F207C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE18FC9B2E253188008F207C /* FlashCardModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DE18FC9F2E253188008F207C /* CardsView */ = {
+			isa = PBXGroup;
+			children = (
+				DE18FC9D2E253188008F207C /* FlashCardContainerView.swift */,
+				DE18FC9E2E253188008F207C /* FlashCardView.swift */,
+			);
+			path = CardsView;
+			sourceTree = "<group>";
+		};
+		DE18FCA02E253188008F207C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE18FC9F2E253188008F207C /* CardsView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE18FCA42E253188008F207C /* Flashcards */ = {
+			isa = PBXGroup;
+			children = (
+				DE18FC9C2E253188008F207C /* Models */,
+				DE18FCA02E253188008F207C /* Views */,
+				DE18FCA12E253188008F207C /* FlashcardsView.swift */,
+				DE18FCA22E253188008F207C /* FlashcardsViewController.swift */,
+				DE18FCA32E253188008F207C /* FlashcardsViewModel.swift */,
+			);
+			path = Flashcards;
+			sourceTree = "<group>";
+		};
+		DE18FCA72E253188008F207C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE18FCA52E253188008F207C /* FlashcardsTopicsTableCell.swift */,
+				DE18FCA62E253188008F207C /* FlashcardsTopicsTableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE18FCAB2E253188008F207C /* FlashcardsTopics */ = {
+			isa = PBXGroup;
+			children = (
+				DE18FCA72E253188008F207C /* Views */,
+				DE18FCA82E253188008F207C /* FlashcardsTopicsView.swift */,
+				DE18FCA92E253188008F207C /* FlashcardsTopicsViewController.swift */,
+				DE18FCAA2E253188008F207C /* FlashcardsTopicsViewModel.swift */,
+			);
+			path = FlashcardsTopics;
+			sourceTree = "<group>";
+		};
+		DE18FCAC2E253188008F207C /* Flashcards */ = {
+			isa = PBXGroup;
+			children = (
+				DE18FC9A2E253188008F207C /* Finish */,
+				DE18FCA42E253188008F207C /* Flashcards */,
+				DE18FCAB2E253188008F207C /* FlashcardsTopics */,
+			);
+			path = Flashcards;
+			sourceTree = "<group>";
+		};
+		DE18FCBC2E2531E1008F207C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE18FCBA2E2531E1008F207C /* TabItemView.swift */,
+				DE18FCBB2E2531E1008F207C /* TabView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE18FCC02E2531E1008F207C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DE18FCBC2E2531E1008F207C /* Views */,
+				DE18FCBD2E2531E1008F207C /* MainView.swift */,
+				DE18FCBE2E2531E1008F207C /* MainViewController.swift */,
+				DE18FCBF2E2531E1008F207C /* MainViewCoordinator.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		DE47904F2E1C040F006564A0 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -994,26 +1190,6 @@
 				DE6157592DDA5159009A9952 /* SceneDelegate.swift */,
 			);
 			path = Misc;
-			sourceTree = "<group>";
-		};
-		DE61575D2DDA5159009A9952 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				DE61575B2DDA5159009A9952 /* TabItemView.swift */,
-				DE61575C2DDA5159009A9952 /* TabView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		DE6157612DDA5159009A9952 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				DE61575D2DDA5159009A9952 /* Views */,
-				DE61575E2DDA5159009A9952 /* MainView.swift */,
-				DE61575F2DDA5159009A9952 /* MainViewController.swift */,
-				DE6157602DDA5159009A9952 /* MainViewCoordinator.swift */,
-			);
-			path = Main;
 			sourceTree = "<group>";
 		};
 		DE6157632DDA5159009A9952 /* Views */ = {
@@ -1939,7 +2115,8 @@
 		DE61589D2DDA5159009A9952 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				DE6157612DDA5159009A9952 /* Main */,
+				DE18FCC02E2531E1008F207C /* Main */,
+				DE18FCAC2E253188008F207C /* Flashcards */,
 				DE6157652DDA5159009A9952 /* Photo */,
 				DE6157882DDA5159009A9952 /* Plan */,
 				DE61579E2DDA5159009A9952 /* Practice */,
@@ -2248,6 +2425,7 @@
 		DE6159072DDA5159009A9952 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DE18FC8E2E253175008F207C /* Flashcards */,
 				DE6158A32DDA5159009A9952 /* Courses */,
 				DE6158AE2DDA5159009A9952 /* Plan */,
 				DE6158C42DDA5159009A9952 /* Profile */,
@@ -2481,7 +2659,6 @@
 				DE61595E2DDA5159009A9952 /* OCreatingPlanView.swift in Sources */,
 				DE61595F2DDA5159009A9952 /* StatsMediator.swift in Sources */,
 				DE6159602DDA5159009A9952 /* ReviewFilterButton.swift in Sources */,
-				DE6159612DDA5159009A9952 /* MainViewController.swift in Sources */,
 				DE6159622DDA5159009A9952 /* SignError.swift in Sources */,
 				DE6159632DDA5159009A9952 /* PracticeDateOfExamView.swift in Sources */,
 				DE6159642DDA5159009A9952 /* GetPlanRequest.swift in Sources */,
@@ -2492,6 +2669,15 @@
 				DE6159692DDA5159009A9952 /* QuestionTableExplanationImageCell.swift in Sources */,
 				DE61596A2DDA5159009A9952 /* StatsView.swift in Sources */,
 				DE61596B2DDA5159009A9952 /* CoursesViewController.swift in Sources */,
+				DE18FC8F2E253175008F207C /* GetFlashcardsRequest.swift in Sources */,
+				DE18FC902E253175008F207C /* GetFlashcardsTopicsRequest.swift in Sources */,
+				DE18FC912E253175008F207C /* GetFlashcardsResponseMapper.swift in Sources */,
+				DE18FC922E253175008F207C /* MarkFlashcardRequest.swift in Sources */,
+				DE18FC932E253175008F207C /* GetFlashcardsTopicsResponseMapper.swift in Sources */,
+				DE18FC942E253175008F207C /* Flashcard.swift in Sources */,
+				DE18FC952E253175008F207C /* FlashcardTopic.swift in Sources */,
+				DE18FC962E253175008F207C /* FlashCardManagerMediator.swift in Sources */,
+				DE18FC972E253175008F207C /* FlashcardsManager.swift in Sources */,
 				DE61596C2DDA5159009A9952 /* PaddingPickerView.swift in Sources */,
 				DE61596D2DDA5159009A9952 /* GetStatsRequest.swift in Sources */,
 				DE61596E2DDA5159009A9952 /* CustomMadeTestTableCountCell.swift in Sources */,
@@ -2542,7 +2728,6 @@
 				DE6159942DDA5159009A9952 /* TapAreaButton.swift in Sources */,
 				DE6159952DDA5159009A9952 /* SplashViewModel.swift in Sources */,
 				DE6159962DDA5159009A9952 /* QuestionsCountCollectionLayout.swift in Sources */,
-				DE6159972DDA5159009A9952 /* MainView.swift in Sources */,
 				DE6159982DDA5159009A9952 /* PracticeViewModel.swift in Sources */,
 				DE6159992DDA5159009A9952 /* TestType.swift in Sources */,
 				DE61599A2DDA5159009A9952 /* GetProfileRequest.swift in Sources */,
@@ -2561,7 +2746,6 @@
 				DE6159A72DDA5159009A9952 /* SettingsTableView.swift in Sources */,
 				DE6159A82DDA5159009A9952 /* PaygateInteractor.swift in Sources */,
 				DE6159A92DDA5159009A9952 /* String+Extension.swift in Sources */,
-				DE6159AA2DDA5159009A9952 /* TabItemView.swift in Sources */,
 				DE6159AB2DDA5159009A9952 /* GetProfileResponseMapper.swift in Sources */,
 				DE6159AC2DDA5159009A9952 /* RemoveSavedQuestionRequest.swift in Sources */,
 				DE6159AD2DDA5159009A9952 /* TestStats.swift in Sources */,
@@ -2573,6 +2757,24 @@
 				DE6159B52DDA5159009A9952 /* Course.swift in Sources */,
 				DE6159B62DDA5159009A9952 /* UIView+RxExtension.swift in Sources */,
 				DE6159B72DDA5159009A9952 /* SubjectProgress.swift in Sources */,
+				DE18FCAD2E253188008F207C /* FlashcardsViewController.swift in Sources */,
+				DE18FCAE2E253188008F207C /* FlashCardContainerView.swift in Sources */,
+				DE18FCC12E2531E1008F207C /* MainViewController.swift in Sources */,
+				DE18FCC22E2531E1008F207C /* TabView.swift in Sources */,
+				DE18FCC32E2531E1008F207C /* MainView.swift in Sources */,
+				DE18FCC42E2531E1008F207C /* TabItemView.swift in Sources */,
+				DE18FCC52E2531E1008F207C /* MainViewCoordinator.swift in Sources */,
+				DE18FCAF2E253188008F207C /* FlashcardsViewModel.swift in Sources */,
+				DE18FCB02E253188008F207C /* FlashcardsTopicsTableView.swift in Sources */,
+				DE18FCB12E253188008F207C /* FlashcardsView.swift in Sources */,
+				DE18FCB22E253188008F207C /* FlashCardView.swift in Sources */,
+				DE18FCB32E253188008F207C /* FlashcardsTopicsViewController.swift in Sources */,
+				DE18FCB42E253188008F207C /* FlashcardsTopicsTableCell.swift in Sources */,
+				DE18FCB52E253188008F207C /* FlashcardsFinishViewController.swift in Sources */,
+				DE18FCB62E253188008F207C /* FlashCardModel.swift in Sources */,
+				DE18FCB72E253188008F207C /* FlashcardsTopicsViewModel.swift in Sources */,
+				DE18FCB82E253188008F207C /* FlashcardsTopicsView.swift in Sources */,
+				DE18FCB92E253188008F207C /* FlashcardsFinishView.swift in Sources */,
 				DE6159B82DDA5159009A9952 /* UITapGestureRecognizer+Extension.swift in Sources */,
 				DE6159B92DDA5159009A9952 /* GetTestStatsRequest.swift in Sources */,
 				DE6159BA2DDA5159009A9952 /* StepCollectionElement.swift in Sources */,
@@ -2695,7 +2897,6 @@
 				DE615A2F2DDA5159009A9952 /* CustomMadeTestTableTitleCell.swift in Sources */,
 				DE615A302DDA5159009A9952 /* PlanHeaderView.swift in Sources */,
 				DE615A312DDA5159009A9952 /* GetTenTestRequest.swift in Sources */,
-				DE615A332DDA5159009A9952 /* TabView.swift in Sources */,
 				DE615A342DDA5159009A9952 /* TestSequence.swift in Sources */,
 				DE615A352DDA5159009A9952 /* ReviewTableView.swift in Sources */,
 				DE615A362DDA5159009A9952 /* CustomMadeTestView.swift in Sources */,
@@ -2724,7 +2925,6 @@
 				DE615A4E2DDA5159009A9952 /* ProfileManager.swift in Sources */,
 				DE615A4F2DDA5159009A9952 /* SettingsProfileCell.swift in Sources */,
 				DE615A502DDA5159009A9952 /* PaygateActionsView.swift in Sources */,
-				DE615A512DDA5159009A9952 /* MainViewCoordinator.swift in Sources */,
 				DE615A522DDA5159009A9952 /* APIRequestBody.swift in Sources */,
 				DE615A532DDA5159009A9952 /* RestAPITransport.swift in Sources */,
 				DE615A542DDA5159009A9952 /* ProfileViewCoordinator.swift in Sources */,
@@ -2775,7 +2975,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = RWST5PC946;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -2791,7 +2991,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = prep.exams.moto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2814,7 +3014,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = RWST5PC946;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -2830,7 +3030,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = prep.exams.moto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

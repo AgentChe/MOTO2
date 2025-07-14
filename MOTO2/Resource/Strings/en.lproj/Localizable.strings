@@ -283,3 +283,16 @@
 "ConfirmReset.Title" = "Reset the exam progress?";
 "ConfirmReset.SubTitle" = "This will remove all your progress\non the current exam. Are you sure\nyou want to reset?";
 "ConfirmReset.Reset" = "Reset progress";
+
+// MARK: FlashcardsTopics
+"FlashcardsTopics.Title" = "Flashcards";
+"FlashcardsTopics.Count" = "%i cards";
+
+// MARK: Flashcards
+"Flashcards.ShowAnswer" = "Show answer";
+"Flashcards.Know" = "Know";
+"Flashcards.StillLearning" = "Still learning";
+
+// MARK: FlashcardsFinish
+"FlashcardsFinish.Text" = "Great job! You’ve learned %i flashcards";
+"FlashcardsFinish.Button" = "Finish";

@@ -35,19 +35,7 @@ final class TabItemView: UIButton {
 // MARK: Private
 private extension TabItemView {
     func update() {
-        let color: UIColor
-        
-        switch mode {
-        case .selected:
-            color = Appearance.main300
-        case .deselected:
-            color = Appearance.mono300
-        }
-        
-        label.textColor = color
-        
-        iconView.image = iconView.image?.withRenderingMode(.alwaysTemplate)
-        iconView.tintColor = color
+        alpha = mode == .selected ? 1 : 0.3
     }
 }
 

@@ -9,11 +9,12 @@ import UIKit
 
 final class TabView: UIView {
     enum Tab {
-        case plan, practice, profile
+        case plan, practice, flashcards, profile
     }
     
     lazy var planItem = makeItem(image: "Main.Plan", title: "Main.Plan")
     lazy var practiceItem = makeItem(image: "Main.Practice", title: "Main.Practice")
+    lazy var flashcardsItem = makeItem(image: "Main.Flashcards", title: "Main.Flashcards")
     lazy var profileItem = makeItem(image: "Main.Profile", title: "Main.Profile")
     
     var selectedTab = Tab.practice {
@@ -36,23 +37,10 @@ final class TabView: UIView {
 // MARK: Private
 private extension TabView {
     func update() {
-        [
-            planItem,
-            practiceItem,
-            profileItem
-        ]
-        .forEach {
-            $0.mode = .deselected
-        }
-        
-        switch selectedTab {
-        case .plan:
-            planItem.mode = .selected
-        case .practice:
-            practiceItem.mode = .selected
-        case .profile:
-            profileItem.mode = .selected
-        }
+        planItem.mode = selectedTab == .plan ? .selected : .deselected
+        practiceItem.mode = selectedTab == .practice ? .selected : .deselected
+        flashcardsItem.mode = selectedTab == .flashcards ? .selected : .deselected
+        profileItem.mode = selectedTab == .profile ? .selected : .deselected
     }
 }
 
@@ -70,11 +58,18 @@ private extension TabView {
             practiceItem.leadingAnchor.constraint(equalTo: planItem.trailingAnchor),
             practiceItem.bottomAnchor.constraint(equalTo: bottomAnchor),
             practiceItem.topAnchor.constraint(equalTo: topAnchor),
-            practiceItem.widthAnchor.constraint(equalTo: profileItem.widthAnchor)
+            practiceItem.widthAnchor.constraint(equalTo: flashcardsItem.widthAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            profileItem.leadingAnchor.constraint(equalTo: practiceItem.trailingAnchor),
+            flashcardsItem.leadingAnchor.constraint(equalTo: practiceItem.trailingAnchor),
+            flashcardsItem.bottomAnchor.constraint(equalTo: bottomAnchor),
+            flashcardsItem.topAnchor.constraint(equalTo: topAnchor),
+            flashcardsItem.widthAnchor.constraint(equalTo: profileItem.widthAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            profileItem.leadingAnchor.constraint(equalTo: flashcardsItem.trailingAnchor),
             profileItem.bottomAnchor.constraint(equalTo: bottomAnchor),
             profileItem.topAnchor.constraint(equalTo: topAnchor),
             profileItem.trailingAnchor.constraint(equalTo: trailingAnchor)
