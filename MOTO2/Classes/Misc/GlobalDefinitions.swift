@@ -17,9 +17,9 @@ final class GlobalDefinitions {
     static let applicationTag = "EXAMS_MOTO"
     static let amplitudeApiKey = "8b5138249711d65974423b54fed13562"
     
-    static let termsOfServiceUrl = URL(string: "https://apps-by-konstantin.com/terms")!
-    static let privacyPolicyUrl = URL(string: "https://apps-by-konstantin.com/policy")!
-    static let contactUsUrl = URL(string: "https://apps-by-konstantin.com/contact")!
+    static let termsOfServiceUrl = URL(string: "https://appslaunchpad.com/terms")!
+    static let privacyPolicyUrl = URL(string: "https://appslaunchpad.com/policy")!
+    static let contactUsUrl = URL(string: "https://appslaunchpad.com/contact")!
     
     enum Paygate {
         static let lifetime = "prep.exams.moto.lifetime"

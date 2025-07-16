@@ -12,7 +12,6 @@ final class MainViewCoordinator {
     
     lazy var planVC = NavigationController(rootViewController: PlanViewController.make())
     lazy var practiceVC = NavigationController(rootViewController: PracticeViewController.make())
-    lazy var flashcardsVC = NavigationController(rootViewController: FlashcardsTopicsViewController.make())
     lazy var profileVC = NavigationController(rootViewController: ProfileViewController.make())
     
     private var previousVC: UIViewController?
@@ -29,8 +28,6 @@ final class MainViewCoordinator {
             changeVC(on: planVC)
         case .practice:
             changeVC(on: practiceVC)
-        case .flashcards:
-            changeVC(on: flashcardsVC)
         case .profile:
             changeVC(on: profileVC)
         }

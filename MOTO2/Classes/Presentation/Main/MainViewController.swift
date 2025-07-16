@@ -69,9 +69,6 @@ private extension MainViewController {
                 mainView.tabView.practiceItem
                     .rx.tap.map { TabView.Tab.practice },
                 
-                mainView.tabView.flashcardsItem
-                    .rx.tap.map { TabView.Tab.flashcards },
-                
                 mainView.tabView.profileItem
                     .rx.tap.map { TabView.Tab.profile }
             ])
