@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9485F81BB2DA62DCF78A959F /* Pods_MOTO2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1371292964DEFD183378923 /* Pods_MOTO2.framework */; };
+		DE1562D82E54592D00365C61 /* GetFinalTestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1562D72E54592D00365C61 /* GetFinalTestRequest.swift */; };
 		DE18FC8F2E253175008F207C /* GetFlashcardsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC862E253175008F207C /* GetFlashcardsRequest.swift */; };
 		DE18FC902E253175008F207C /* GetFlashcardsTopicsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC892E253175008F207C /* GetFlashcardsTopicsRequest.swift */; };
 		DE18FC912E253175008F207C /* GetFlashcardsResponseMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18FC872E253175008F207C /* GetFlashcardsResponseMapper.swift */; };
@@ -392,6 +393,7 @@
 		25ABAEC68D36E3204E5C7511 /* Pods-MOTO2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOTO2.debug.xcconfig"; path = "Target Support Files/Pods-MOTO2/Pods-MOTO2.debug.xcconfig"; sourceTree = "<group>"; };
 		773B058C23AD56755278778C /* Pods-MOTO2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MOTO2.release.xcconfig"; path = "Target Support Files/Pods-MOTO2/Pods-MOTO2.release.xcconfig"; sourceTree = "<group>"; };
 		D1371292964DEFD183378923 /* Pods_MOTO2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MOTO2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE1562D72E54592D00365C61 /* GetFinalTestRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFinalTestRequest.swift; sourceTree = "<group>"; };
 		DE18FC802E253175008F207C /* FlashCardManagerMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardManagerMediator.swift; sourceTree = "<group>"; };
 		DE18FC812E253175008F207C /* FlashcardsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsManager.swift; sourceTree = "<group>"; };
 		DE18FC832E253175008F207C /* Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
@@ -2315,6 +2317,7 @@
 				DE6158E22DDA5159009A9952 /* GetTestRequest.swift */,
 				DE6158E32DDA5159009A9952 /* GetTestResponseMapper.swift */,
 				DE6158E42DDA5159009A9952 /* QuestionMapper.swift */,
+				DE1562D72E54592D00365C61 /* GetFinalTestRequest.swift */,
 			);
 			path = GetTest;
 			sourceTree = "<group>";
@@ -2826,6 +2829,7 @@
 				DE6159E82DDA5159009A9952 /* Review.swift in Sources */,
 				DE6159E92DDA5159009A9952 /* OMotivationCell.swift in Sources */,
 				DE6159EA2DDA5159009A9952 /* MyProfileViewController.swift in Sources */,
+				DE1562D82E54592D00365C61 /* GetFinalTestRequest.swift in Sources */,
 				DE6159EB2DDA5159009A9952 /* TestBottomView.swift in Sources */,
 				DE6159ED2DDA5159009A9952 /* QuestionTableView.swift in Sources */,
 				DE6159EE2DDA5159009A9952 /* PlanFinalStep.swift in Sources */,
@@ -2975,7 +2979,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = X939349SF3;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -2991,7 +2995,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = prep.exams.moto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3014,7 +3018,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = X939349SF3;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -3030,7 +3034,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.4;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = prep.exams.moto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
