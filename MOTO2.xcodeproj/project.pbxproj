@@ -111,7 +111,6 @@
 		DE6159402DDA5159009A9952 /* ReviewTableSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6157CC2DDA5159009A9952 /* ReviewTableSeparatorCell.swift */; };
 		DE6159412DDA5159009A9952 /* QuestionTableContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE61586D2DDA5159009A9952 /* QuestionTableContentCell.swift */; };
 		DE6159422DDA5159009A9952 /* ProfileTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6157BE2DDA5159009A9952 /* ProfileTabsView.swift */; };
-		DE6159432DDA5159009A9952 /* AmplitudeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6157272DDA5159009A9952 /* AmplitudeManager.swift */; };
 		DE6159442DDA5159009A9952 /* TestStatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6158952DDA5159009A9952 /* TestStatsViewModel.swift */; };
 		DE6159452DDA5159009A9952 /* XORRequestWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6157432DDA5159009A9952 /* XORRequestWrapper.swift */; };
 		DE6159462DDA5159009A9952 /* FinishTestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6158ED2DDA5159009A9952 /* FinishTestRequest.swift */; };
@@ -442,7 +441,6 @@
 		DE61571A2DDA5154009A9952 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		DE61571B2DDA5154009A9952 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		DE61571E2DDA5154009A9952 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		DE6157272DDA5159009A9952 /* AmplitudeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplitudeManager.swift; sourceTree = "<group>"; };
 		DE6157292DDA5159009A9952 /* PaginatedDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedDataLoader.swift; sourceTree = "<group>"; };
 		DE61572A2DDA5159009A9952 /* RxActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxActivityIndicator.swift; sourceTree = "<group>"; };
 		DE61572C2DDA5159009A9952 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -1073,14 +1071,6 @@
 			path = Strings;
 			sourceTree = "<group>";
 		};
-		DE6157282DDA5159009A9952 /* Analytics */ = {
-			isa = PBXGroup;
-			children = (
-				DE6157272DDA5159009A9952 /* AmplitudeManager.swift */,
-			);
-			path = Analytics;
-			sourceTree = "<group>";
-		};
 		DE61572B2DDA5159009A9952 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -1180,7 +1170,6 @@
 		DE61575A2DDA5159009A9952 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				DE6157282DDA5159009A9952 /* Analytics */,
 				DE61572B2DDA5159009A9952 /* Components */,
 				DE6157372DDA5159009A9952 /* CustomViews */,
 				DE6157412DDA5159009A9952 /* Extension */,
@@ -2632,7 +2621,6 @@
 				DE6159402DDA5159009A9952 /* ReviewTableSeparatorCell.swift in Sources */,
 				DE6159412DDA5159009A9952 /* QuestionTableContentCell.swift in Sources */,
 				DE6159422DDA5159009A9952 /* ProfileTabsView.swift in Sources */,
-				DE6159432DDA5159009A9952 /* AmplitudeManager.swift in Sources */,
 				DE6159442DDA5159009A9952 /* TestStatsViewModel.swift in Sources */,
 				DE6159452DDA5159009A9952 /* XORRequestWrapper.swift in Sources */,
 				DE6159462DDA5159009A9952 /* FinishTestRequest.swift in Sources */,
@@ -2979,7 +2967,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = X939349SF3;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -2995,7 +2983,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = prep.exams.moto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3018,7 +3006,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = X939349SF3;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -3034,7 +3022,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = prep.exams.moto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
